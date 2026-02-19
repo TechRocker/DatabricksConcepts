@@ -1,0 +1,23 @@
+resources:
+  jobs:
+    sales-pipeline:
+      name: sales-pipeline
+      tasks:
+        - task_key: run-sales-pipeline
+          spark_python_task:
+            python_file: ../src/sales_pipeline.py
+            parameters:
+              - --input-path
+              - /Volumes/circuitbox/landing/operational_data/customers/
+              - --bronze-table
+              - circuitbox.ablakehouse.customers_bronze
+              - --silver-table
+              - circuitbox.ablakehouse.customers_silver
+              - --gold-table
+              - circuitbox.ablakehouse.customers_gold
+          environment_key: default
+      environments:
+        - environment_key: default
+          spec:
+            serverless: true            
+            environment_version: "4"

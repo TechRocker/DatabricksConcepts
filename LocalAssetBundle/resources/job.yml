@@ -11,5 +11,6 @@ resources:
       environments:
         - environment_key: default
           spec:
-            serverless: true            
+            serverless: true
+            
             environment_version: "4"
