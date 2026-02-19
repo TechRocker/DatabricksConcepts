@@ -1,0 +1,8 @@
+bundle:
+  name: databricks-demo
+
+targets:
+  dev:
+    workspace:
+      host: https://dbc-4814c37b-e52c.cloud.databricks.com
+    default: true
