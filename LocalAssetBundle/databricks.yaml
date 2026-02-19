@@ -1,6 +1,10 @@
 bundle:
   name: databricks-demo
 
+include:
+  - resources/*.yml
+  - resources/*/*.yml
+
 targets:
   dev:
     workspace:

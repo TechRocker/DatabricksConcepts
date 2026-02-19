@@ -42,3 +42,9 @@ databricks --version
 ```bash
 pip install pytest chispa pyspark
 ```
+
+```bash
+databricks bundle validate
+databricks bundle deploy -t dev
+databricks bundle run demo-job
+```

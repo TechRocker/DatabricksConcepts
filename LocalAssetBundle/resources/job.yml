@@ -5,8 +5,11 @@ resources:
       tasks:
         - task_key: run-notebook
           spark_python_task:
-            python_file: src/main.py
-          new_cluster:
-            spark_version: 14.3.x-scala2.12
-            node_type_id: Standard_DS3_v2
-            num_workers: 1
+            python_file: ../src/main.py    
+          environment_key: default    
+
+      environments:
+        - environment_key: default
+          spec:
+            serverless: true            
+            environment_version: "4"
